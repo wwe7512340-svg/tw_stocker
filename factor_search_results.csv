@@ -1,0 +1,10 @@
+Configuration,Weights,Sharpe,Ann_Return_%,MDD_%,Calmar,Trades,Win_Rate_%,Profit_Factor
+v8.5 Baseline (mom×3+trend×1),"{'momentum_20': 3.0, 'trend_60ma': 1.0}",1.537,44.2,-25.0,1.766,533,52.5,1.54
+RSI-20 only,{'rsi_20': 1.0},2.046,56.17,-22.9,2.453,562,55.0,1.71
+Breakout-300 only,{'breakout_300': 1.0},0.975,18.21,-19.0,0.959,437,53.8,1.39
+RevMomentum-60 only,{'rev_momentum_60': 1.0},1.067,25.55,-31.5,0.811,491,50.5,1.37
+Baseline + RSI×1,"{'momentum_20': 3.0, 'trend_60ma': 1.0, 'rsi_20': 1.0}",1.939,59.41,-19.9,2.992,543,56.5,1.75
+Baseline + Breakout×1,"{'momentum_20': 3.0, 'trend_60ma': 1.0, 'breakout_300': 1.0}",1.504,36.47,-22.2,1.646,441,54.4,1.58
+Baseline + RevMom×1,"{'momentum_20': 3.0, 'trend_60ma': 1.0, 'rev_momentum_60': 1.0}",1.528,41.62,-24.8,1.679,524,52.9,1.52
+FinLab 雙渦輪 (Mom+RevMom+Trend),"{'momentum_20': 2.0, 'rev_momentum_60': 2.0, 'trend_60ma': 1.0}",1.494,41.79,-20.9,2.002,517,53.0,1.47
+All Factors Ensemble,"{'momentum_20': 3.0, 'trend_60ma': 1.0, 'rsi_20': 0.5, 'breakout_300': 0.5, 'rev_momentum_60': 0.5}",1.336,33.66,-26.3,1.282,457,53.0,1.51
