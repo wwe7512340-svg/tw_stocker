@@ -1012,3 +1012,14 @@ def build_latest_watchlist(intraday: Dict[str, pd.DataFrame],
             "Target_Net_Max": config.target_max,
         })
     return pd.DataFrame(rows)
+if __name__ == "__main__":
+    project_root = Path(__file__).resolve().parent.parent
+    data_dir = project_root / "data"
+
+    print(f"讀取資料夾：{data_dir}")
+    intraday = load_intraday_data(data_dir)
+    print(f"成功載入：{len(intraday)} 檔股票資料")
+
+    trades, daily, summary = run_backtest(intraday)
+    print(summary)
+    print(trades.tail())
